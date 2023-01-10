@@ -137,15 +137,3 @@ def DATA_EXTRACT_BSE():
     FINAL.to_csv("LIVE_RECORD_bse.csv",mode="a",index=False,header=False)
     print(current_time+' '+'DATA RECORDED SUCCESSFULLY')
     time.sleep(INTERVAL*60)
-
-for j in range(0,int(REPEAT_CODE)):
-    while True:
-        try:
-            DATA_EXTRACT_BSE()
-            break
-        except Exception as e:
-            # print("Trying to collect data")
-            print(e)
-            time.sleep(5)
-
-
